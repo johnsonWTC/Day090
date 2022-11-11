@@ -11,6 +11,7 @@ export class DoorComponent implements OnInit {
 
 show =true;
 insideText ="Showing text";
+buttonText : string = "show";
 
 
   ngOnInit(): void {
@@ -19,8 +20,12 @@ insideText ="Showing text";
   ShowButton(){
     if(this.show){
       this.insideText = "showing text"
+      this.buttonText = "Hide text";
+    }else{
+      
+      this.buttonText = "Show text";
     }
-    this.show = ! this.show;
+    this.show = !this.show;
   }
 
 }
